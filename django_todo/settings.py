@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
 import dj_database_url
-from env import SECRET_KEY
+# from env import SECRET_KEY
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-SECRET_KEY = SECRET_KEY
+# SECRET_KEY = SECRET_KEY
 
 CSRF_TRUSTED_ORIGINS = ['https://beckyskel-hellodjango-pcfwzg4dsff.ws-eu75.gitpod.io/']
 

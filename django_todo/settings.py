@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# SECRET_KEY = SECRET_KEY
+SECRET_KEY = SECRET_KEY
 
 CSRF_TRUSTED_ORIGINS = ['https://beckyskel-hellodjango-pcfwzg4dsff.ws-eu75.gitpod.io/']
 

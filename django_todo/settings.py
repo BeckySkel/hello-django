@@ -9,6 +9,8 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
+import os
+import dj_database_url
 from env import SECRET_KEY
 from pathlib import Path
 
@@ -23,6 +25,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DEBUG = True
 
 SECRET_KEY = SECRET_KEY
+
+CSRF_TRUSTED_ORIGINS = ['https://beckyskel-hellodjango-pcfwzg4dsff.ws-eu75.gitpod.io/']
 
 ALLOWED_HOSTS = []
 
@@ -73,11 +77,15 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.parse('postgres://bdljwjgzokdzah:f654ad4289b0febb1bcb1f3a062a8cc8a412b119224affa2fa5b29898e152d4f@ec2-176-34-215-248.eu-west-1.compute.amazonaws.com:5432/de47os6254rfml')
 }
 
 
